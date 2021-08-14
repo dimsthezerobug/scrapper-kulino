@@ -21,6 +21,11 @@ Fitur Opsional :
 Menu :
 
 * Absensi
+
+
+![Peek 2021-08-14 21-16](https://user-images.githubusercontent.com/76572359/129449518-854dc354-85da-4132-a291-4398de7e4ac2.gif)
+
+
 * Cek Absensi
 * Pindah Akun
 
