@@ -29,7 +29,7 @@ Menu :
 * Cek Absensi
 
 
-![Peek 2021-08-15 08-43](https://user-images.githubusercontent.com/76572359/129464332-0fc09c9b-d215-4788-8bbc-8143bbc46b8f.gif)
+![Peek 2021-08-15 08-51](https://user-images.githubusercontent.com/76572359/129464462-1c4a1f68-2c56-4993-809b-64d6eda9e349.gif)
 
 
 * Pindah Akun
