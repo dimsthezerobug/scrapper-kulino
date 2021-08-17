@@ -36,14 +36,36 @@ def login():
     return dashboard_content
 
 
+def change_acct():
+    username = input("\nMasukan username: ")
+    password = input("Masukan password: ")
+    
+    with open("account.txt", mode="w") as file:
+        file.write(f"{username} {password}")
+       
+    print("\nAkun Telah Diganti")
+
+
 def main():
     dashboard_content = login()
 
     # tampilan menu
     print("Daftar Menu: ")
     print("\n1. Absensi\n2. Cek Absensi\n3. Pindah Akun\n")
-    order = int(input("Silahkan pilih menu (masukan angka 1/2/3) : "))
-
+    try:
+        order = int(input("Silahkan pilih menu (masukan angka 1/2/3) : "))
+    except:
+        print("Terjadi Kesalahan")
+       
+    if order == 1:
+        pass
+    elif order == 2:
+        pass
+    elif order == 3:
+        change_acct()
+    else:
+        print("Terjadi Kesalahan")
+  
 
 if __name__ == "__main__":
     main()
