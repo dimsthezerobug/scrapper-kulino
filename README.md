@@ -1,6 +1,6 @@
 # ABSENNO
 
-ABSENNO adalah program yang bisa digunakan untuk membantu mempermudah absen di Kulino (website kuliah online UDINUS).
+ABSENNO adalah script automitation yang bisa digunakan untuk membantu mempermudah absen di Kulino (website kuliah online UDINUS).
 
 ## Fitur
 
