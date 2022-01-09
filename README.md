@@ -1,6 +1,6 @@
-# ABSENNO
+# ABSENNO (Mangkrak)
 
-ABSENNO adalah script automitation yang bisa digunakan untuk membantu mempermudah absen di Kulino (website kuliah online UDINUS).
+ABSENNO adalah script automitation yang bisa digunakan untuk membantu mempermudah absen di Kulino (website kuliah online UDINUS). Tidak dilanjutkan karena buruknya pembagian waktu untuk tugas dan membuat projek ini. 
 
 ## Fitur
 
