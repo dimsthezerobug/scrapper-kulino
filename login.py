@@ -1,4 +1,5 @@
 import os
+from prettytable import PrettyTable
 import requests
 import warnings
 from bs4 import BeautifulSoup
@@ -51,6 +52,15 @@ class Absenno:
 
         return courses
 
+    def showCourses(self):
+        courses = self.getCourses()
+        table = PrettyTable()
+        table.field_names = ["ID", "Course Name"]
+        for course, id in courses.items():
+            table.add_row([id, course])
+
+        print(table)
+
 
 def main():
     username = os.environ["username_kul"]
@@ -58,7 +68,8 @@ def main():
 
     absen = Absenno(username, password)
     print(absen.getName())
-    print(absen.getCourses())
+    # print(absen.getCourses())
+    absen.showCourses()
 
 
 if __name__ == "__main__":
