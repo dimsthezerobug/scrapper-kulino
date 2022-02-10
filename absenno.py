@@ -1,5 +1,4 @@
 import os
-from prettytable import PrettyTable
 import requests
 import warnings
 from bs4 import BeautifulSoup
@@ -54,12 +53,10 @@ class Absenno:
 
     def showCourses(self):
         courses = self.getCourses()
-        table = PrettyTable()
-        table.field_names = ["ID", "Course Name"]
         for course, id in courses.items():
-            table.add_row([id, course])
+            print(id, "-", course)
 
-        print(table)
+
 
 
 def main():
