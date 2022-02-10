@@ -5,14 +5,12 @@ ABSENNO adalah script automitation yang bisa digunakan untuk membantu mempermuda
 ## Fitur
 
 Fitur Utama : 
-* Mengambil pertanyaan yang ada di forum terbaru mata kuliah yang dipilih
-* Melakukan komentar dengan teks yang kita inputkan
-* Menghitung forum yang belum di isi
-* Pindah akun kulino
+* Mengambil pertanyaan yang ada di forum terbaru mata kuliah yang menjadi target (SOLVED)
+* Matkul yang dieksekusi sesuai dengan jadwal pada saat program dijalankan (SOLVED)
+* Melakukan komentar dengan memilih satu komentar random dari mahasiswa lain / dengan kata "hadir"
 
 Fitur Opsional :
 
-* Mencari jawaban dari pertanyaan yang ada di forum secara otomatis
 * Program berjalan otomatis sesuai jadwal perkuliahan
 
 
@@ -22,23 +20,16 @@ Menu :
 
 * Absensi
 
-    Program akan masuk ke forum terbaru matkul yang dipilih, menampilkan pertanyaan yang ada di forum. Kemudian akan mengisi forum dengan teks yang diinputkan user.
+    Program akan masuk ke forum terbaru matkul pada hari program dijalankan, menampilkan pertanyaan yang ada di forum. Kemudian akan memilih satu komentar di forum secara acak.
 
     ![Peek 2021-08-14 21-16](https://user-images.githubusercontent.com/76572359/129449518-854dc354-85da-4132-a291-4398de7e4ac2.gif)
 
 
-* Cek Absensi
+* Cek Absensi (Coming Soon :v)
 
     Program akan mengecek forum-forum yang belum diisi oleh user.
     
     ![Peek 2021-08-15 08-51](https://user-images.githubusercontent.com/76572359/129464462-1c4a1f68-2c56-4993-809b-64d6eda9e349.gif)
-
-
-* Pindah Akun
-
-    Program akan pindah ke akun kulino baru.
-    
-    ![Peek 2021-08-15 08-48](https://user-images.githubusercontent.com/76572359/129464408-f6a1de0c-3a35-43aa-b5ee-bf896465d19e.gif)
 
 
 ## Development
