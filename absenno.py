@@ -11,6 +11,7 @@ class Absenno:
         self.username = username
         self.password = password
         self.session = requests.Session()
+        self.name = ""
         self.url = "https://kulino.dinus.ac.id/"
         self.targets = []
         self.login()
@@ -33,12 +34,15 @@ class Absenno:
 
         return content
 
-    def getName(self):
-        dashboard_content = self.getDashboard()
-        soup = BeautifulSoup(dashboard_content, "html.parser")
-        name = (soup.select_one(".usertext").string).split(" - ")[-1]
-
-        return name
+    def whoami(self):
+        if self.name == "":
+            dashboard_content = self.getDashboard()
+            soup = BeautifulSoup(dashboard_content, "html.parser")
+            name = (soup.select_one(".usertext").string).split(" - ")[-1]
+            print(name)
+        else:
+            print(self.name)
+        
 
     def getCourses(self):
         dashboard_content = self.getDashboard()
@@ -103,7 +107,7 @@ def main():
     password = os.environ["password_kul"]
 
     absen = Absenno(username, password)
-    print(absen.getName())
+    absen.whoami()
     # print(absen.getCourses())
     absen.showCourses()
     while True:
