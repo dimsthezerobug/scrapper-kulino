@@ -22,14 +22,12 @@ Menu :
 
     Program akan masuk ke forum terbaru matkul pada hari program dijalankan, menampilkan pertanyaan yang ada di forum. Kemudian akan memilih satu komentar di forum secara acak.
 
-    ![Peek 2021-08-14 21-16](https://user-images.githubusercontent.com/76572359/129449518-854dc354-85da-4132-a291-4398de7e4ac2.gif)
+    ![image](https://user-images.githubusercontent.com/76572359/153408851-fed5be1e-3c3c-4ea5-b7ee-113b1e9ced62.png)
 
 
 * Cek Absensi (Coming Soon :v)
 
     Program akan mengecek forum-forum yang belum diisi oleh user.
-    
-    ![Peek 2021-08-15 08-51](https://user-images.githubusercontent.com/76572359/129464462-1c4a1f68-2c56-4993-809b-64d6eda9e349.gif)
 
 
 ## Development
