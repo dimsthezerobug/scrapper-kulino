@@ -1,8 +1,14 @@
+import colorama
 import os
 import random
 import requests
 import warnings
 from bs4 import BeautifulSoup
+from prettytable import PrettyTable
+from termcolor import colored
+from textwrap import fill
+
+colorama.init()
 
 warnings.filterwarnings("ignore")
 
@@ -42,9 +48,9 @@ class Absenno:
             dashboard_content = self.getDashboard()
             soup = BeautifulSoup(dashboard_content, "html.parser")
             name = (soup.select_one(".usertext").string).split(" - ")[-1]
-            print(name)
-        else:
-            print(self.name)
+            self.name = name
+
+        return self.name
 
     def getCourses(self):
         if len(self.courses) == 0:
@@ -71,8 +77,11 @@ class Absenno:
         self.targets.append(id_course)
 
     def generateAnswer(self, soup_discussion):
-        all_answer = soup_discussion.find_all(class_="text_to_html")
-        answer = all_answer[random.randrange(len(all_answer) + 1)].text
+        try:
+            all_answer = soup_discussion.find_all(class_="text_to_html")
+            answer = all_answer[random.randrange(len(all_answer) + 1)].text
+        except:
+            answer = "hadir"
 
         return answer
 
@@ -81,7 +90,7 @@ class Absenno:
 
     def absen(self):
         for target in self.targets:
-            print(f"\n[+] ABSEN {self.courses[target]}")
+            print(colored(f"\n[+] ABSEN {self.courses[target]}\n", "yellow"))
             # masuk ke course
             respond_course = self.session.get(self.url + "/course/view.php?id=" + target)
             soup_course = BeautifulSoup(respond_course.text, "html.parser")
@@ -116,10 +125,26 @@ class Absenno:
                     soup_discussion = BeautifulSoup(respond_discussion.text, "html.parser")
                     question = soup_discussion.find(class_="starter").find("p").text
                     answer = self.generateAnswer(soup_discussion)
-                    print("    [?] " + question)
-                    print("    [=]", answer)
+                    # print("    ["+colored("?", "blue") +"] " + question)
+                    # print("    ["+colored("=", "green") +"]", answer)
+
+                    q = PrettyTable()
+                    q.border = False
+                    q.header = False
+                    q.add_row([colored("   [?]", "yellow"), fill(f"{question}", width=50)])
+                    q.align = "l"
+
+                    a = PrettyTable()
+                    a.border = False
+                    a.header = False
+                    a.add_row([colored("   [=]", "yellow"), fill(f"{answer}", width=50)])
+                    a.align = "l"
+
+                    print(q)
+                    print()
+                    print(a)
                 else:
-                    print("    [!] Tidak Ada Forum Yang Terbuka") 
+                    print("    ["+colored("!", "red") +"] Tidak Ada Forum Yang Terbuka") 
 
 
 def main():
